@@ -8,7 +8,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
             if (xhr.status >= 200 && xhr.status < 300) {
                 el.outerHTML = xhr.responseText;
             } else {
-                let message = xhr.statusText || "Ocurrio un error";
+                let message =
+                    xhr.statusText ||
+                    `Ocurrio un error, para ejecutar este proyecto en local debe hacerlo por medio de "localhost". (Recomendacion: utilice Live server)`;
                 el.outerHTML = `<div><p>Error ${xhr.status}: ${message}</p></div>`;
             }
         });
